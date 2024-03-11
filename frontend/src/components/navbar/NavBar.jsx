@@ -55,10 +55,10 @@ const NavBar = () => {
       </ul>
       <div className="nav-login">
         <Link className="link" to="/login">
-          <button>Iniciar Sesion</button>
+          <button className="btn bg0-secondary-v">Iniciar Sesion</button>
         </Link>
         <Link className="link" to="/signup">
-          <button>Registro</button>
+          <button className="btn secondary-v">Registro</button>
         </Link>
       </div>
     </div>

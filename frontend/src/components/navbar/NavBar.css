@@ -1,4 +1,4 @@
-@import "../constants/values.css";
+@import "../globals.css";
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,6 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  color: var(--textlight);
   font-size: var(--parr1);
   font-weight: bold;
 }
@@ -46,26 +45,9 @@
   padding: 0px;
   gap: 32px;
 }
-.nav-login button {
-  outline: none;
-  border: none;
-  border-radius: 16px;
-  width: 120px;
-  height: 51px;
-  background-color: var(--secondary);
-  color: var(--background1);
-  font-size: var(--parr1);
-  font-weight: bold;
-  cursor: pointer;
-}
-.nav-login .link:first-child button {
-  background-color: var(--background0);
-  color: var(--secondary);
-}
-.nav-login .link:active:nth-child(2) button {
-  background-color: var(--secondary_strong);
-}
 .link {
   text-decoration: none;
-  color: inherit;
+}
+li .link {
+  color: var(--textlight);
 }
