@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../assets/logo_64.png";
 const NavBar = () => {
@@ -16,33 +17,49 @@ const NavBar = () => {
             setMenu("inicio");
           }}
         >
-          Inicio{menu === "inicio" ? <hr /> : <></>}
+          <Link className="link" to="/">
+            Inicio
+          </Link>
+          {menu === "inicio" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("nosotros");
           }}
         >
-          Nosotros{menu === "nosotros" ? <hr /> : <></>}
+          <Link className="link" to="/nosotros">
+            Nosotros
+          </Link>
+          {menu === "nosotros" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("contacto");
           }}
         >
-          Contacto{menu === "contacto" ? <hr /> : <></>}
+          <Link className="link" to="/contacto">
+            Contacto
+          </Link>
+          {menu === "contacto" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
             setMenu("preguntas");
           }}
         >
-          Preguntas frecuentes{menu === "preguntas" ? <hr /> : <></>}
+          <Link className="link" to="/faq">
+            Preguntas Frecuentes
+          </Link>
+          {menu === "preguntas" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login">
-        <button>Iniciar Sesion</button>
-        <button>Registro</button>
+        <Link className="link" to="/login">
+          <button>Iniciar Sesion</button>
+        </Link>
+        <Link className="link" to="/signup">
+          <button>Registro</button>
+        </Link>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@
 .nav-menu li {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
+  margin-top: 23px; /*if set to 24 causes .6px of overflow*/
   cursor: pointer;
 }
 .nav-menu hr {
@@ -58,10 +58,14 @@
   font-weight: bold;
   cursor: pointer;
 }
-.nav-login button:first-child {
+.nav-login .link:first-child button {
   background-color: var(--background0);
   color: var(--secondary);
 }
-.nav-login button:active:nth-child(2) {
-  background-color: var(--secondary_light);
+.nav-login .link:active:nth-child(2) button {
+  background-color: var(--secondary_strong);
+}
+.link {
+  text-decoration: none;
+  color: inherit;
 }
